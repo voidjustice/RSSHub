@@ -110171,6 +110171,124 @@
     "description": "::: tip\n网站也提供了部分 RSS: [https://www.smzdm.com/dingyue](https://www.smzdm.com/dingyue)\n:::",
     "lang": "zh-CN"
   },
+  "snnu": {
+    "routes": {
+      "/ccs/:type?": {
+        "path": "/ccs/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/snnu/ccs",
+        "url": "ccs.snnu.edu.cn",
+        "parameters": {
+          "type": "类型，默认为通知公告 (tzgg)，可选学院动态 (news)、学术活动 (xshd)"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "计算机科学学院",
+        "maintainers": [
+          "alterkeyy"
+        ],
+        "radar": [
+          {
+            "source": [
+              "ccs.snnu.edu.cn/tzgg/zhgl1.htm"
+            ],
+            "target": "/ccs/tzgg"
+          },
+          {
+            "source": [
+              "ccs.snnu.edu.cn/xydt/zhxw1.htm"
+            ],
+            "target": "/ccs/news"
+          },
+          {
+            "source": [
+              "ccs.snnu.edu.cn/xssq/xshd.htm"
+            ],
+            "target": "/ccs/xshd"
+          }
+        ],
+        "location": "ccs.ts",
+        "module": "() => import('@/routes/snnu/ccs.ts')"
+      },
+      "/": {
+        "path": "/",
+        "categories": [
+          "university"
+        ],
+        "example": "/snnu",
+        "url": "www.snnu.edu.cn",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "学校官网 - 通知公告",
+        "maintainers": [
+          "alterkeyy"
+        ],
+        "radar": [
+          {
+            "source": [
+              "www.snnu.edu.cn/tzgg.htm"
+            ],
+            "target": "/"
+          }
+        ],
+        "location": "index.ts",
+        "module": "() => import('@/routes/snnu/index.ts')"
+      },
+      "/yjs": {
+        "path": "/yjs",
+        "categories": [
+          "university"
+        ],
+        "example": "/snnu/yjs",
+        "url": "newyjs.snnu.edu.cn",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "研究生院通知公告",
+        "maintainers": [
+          "alterkeyy"
+        ],
+        "radar": [
+          {
+            "source": [
+              "newyjs.snnu.edu.cn/tzgg1.htm"
+            ],
+            "target": "/yjs"
+          }
+        ],
+        "location": "yjs.ts",
+        "module": "() => import('@/routes/snnu/yjs.ts')"
+      }
+    },
+    "name": "Shaanxi Normal University",
+    "apiRoutes": {},
+    "url": "snnu.edu.cn",
+    "zh": {
+      "name": "陕西师范大学"
+    }
+  },
   "snowpeak": {
     "routes": {
       "/us/new-arrivals": {
