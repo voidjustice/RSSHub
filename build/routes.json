@@ -40612,6 +40612,47 @@
     "url": "ekantipur.com",
     "lang": "ne"
   },
+  "elamigos": {
+    "routes": {
+      "/games": {
+        "path": "/games",
+        "categories": [
+          "game"
+        ],
+        "example": "/elamigos/games",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "elamigos.site/",
+              "elamigos.site/index.html"
+            ],
+            "target": "/games"
+          }
+        ],
+        "name": "Releases",
+        "maintainers": [
+          "Kylon92"
+        ],
+        "description": "Latest game releases from ElAmigos",
+        "location": "index.ts",
+        "module": "() => import('@/routes/elamigos/index.ts')"
+      }
+    },
+    "name": "ElAmigos",
+    "apiRoutes": {},
+    "url": "elamigos.site",
+    "description": "Game download site with daily releases",
+    "lang": "en-gb"
+  },
   "elasticsearch-cn": {
     "routes": {
       "/:params?": {
