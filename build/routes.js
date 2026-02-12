@@ -108699,6 +108699,41 @@ export default {
         "location": "finance/china.ts",
         "module": () => import('@/routes/sina/finance/china.ts')
       },
+      "/finance/rollnews/:lid?": {
+        "path": "/finance/rollnews/:lid?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/sina/finance/rollnews",
+        "parameters": {
+          "lid": "分区 id，见下表，默认为 `2519`"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "finance.sina.com.cn/roll",
+              "finance.sina.com.cn/"
+            ],
+            "target": "/finance/rollnews"
+          }
+        ],
+        "name": "财经－滚动新闻",
+        "maintainers": [
+          "betterandbetterii"
+        ],
+        "url": "finance.sina.com.cn/roll",
+        "description": "| 财经 | 股市 | 美股 | 中国概念股 | 港股 | 研究报告 | 全球市场 | 外汇 |\n| ---- | ---- | ---- | ---------- | ---- | -------- | -------- | ---- |\n| 2519 | 2671 | 2672 | 2673       | 2674 | 2675     | 2676     | 2487 |",
+        "location": "finance/rollnews.ts",
+        "module": () => import('@/routes/sina/finance/rollnews.ts')
+      },
       "/finance/stock/usstock/:cids?": {
         "path": "/finance/stock/usstock/:cids?",
         "categories": [
